@@ -66,7 +66,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
             let chunk = png.chunk_by_type(&chunk_type.to_string());
             let chunk = chunk.ok_or("chunk not found")?.data_as_string()?;
-            println!("{}", chunk);
+            println!("{chunk}");
         }
         Commands::Remove {
             file_path,
@@ -83,7 +83,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             let content = std::fs::read(file_path)?;
             let png = Png::try_from(content.as_ref())?;
 
-            println!("{}", png);
+            println!("{png}");
         }
     }
 

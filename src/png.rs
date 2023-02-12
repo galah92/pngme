@@ -95,7 +95,7 @@ impl fmt::Display for Png {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         writeln!(f, "Png {{",)?;
         for chunk in self.chunks() {
-            writeln!(f, "  Chunk: {}", chunk)?;
+            writeln!(f, "  Chunk: {chunk}")?;
         }
         writeln!(f, "}}",)?;
         Ok(())
@@ -262,7 +262,7 @@ mod tests {
 
         let png: Png = TryFrom::try_from(bytes.as_ref()).unwrap();
 
-        let _png_string = format!("{}", png);
+        let _png_string = format!("{png}");
     }
 
     // This is the raw bytes for a shrunken version of the `dice.png` image on Wikipedia
