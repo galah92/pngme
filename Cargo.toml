@@ -12,6 +12,6 @@ license = "MIT License"
 
 [dependencies]
 rand = "^0.8.5"
-crc = "^2.0"
+crc = "^3.0"
 clap = { version = "4.1.4", features = ["derive"] }
 thiserror = "1.0.38"
