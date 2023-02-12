@@ -1,0 +1,17 @@
+[package]
+name = "pngme"
+version = "0.1.0"
+edition = "2021"
+authors = ["galah92"]
+description = "Command line program that lets you hide secret messages in PNG files."
+readme = "https://github.com/galah92/pngme/blob/master/README.md"
+repository = "https://github.com/galah92/pngme"
+license = "MIT License"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "^0.8.5"
+crc = "^2.0"
+clap = { version = "4.1.4", features = ["derive"] }
+thiserror = "1.0.38"
